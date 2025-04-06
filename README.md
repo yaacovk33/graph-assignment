@@ -19,20 +19,6 @@ Five classic graph algorithms are provided:
 
 ---
 
-## Project Structure
-graph_assignment-sp2/
- ├── include/
-    │ ├── Graph.h
-      ├── Algorithms.h 
-      └── doctest.h // for unit testing 
-├── src/
-      ├── Graph.cpp // Implementation of the Graph class 
-      ├── Algorithms.cpp // Implementation of all algorithms 
-      ├── Main.cpp // Demo usage 
-      └── tests.cpp // Unit tests with doctest 
-├── Makefile 
-└── README.md
-
 ### Key Points
 
 - **Graph class**  
