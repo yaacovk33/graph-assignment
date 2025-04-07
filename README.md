@@ -26,9 +26,9 @@ Five classic graph algorithms are provided:
 ```plaintext
 graph_assignment-sp2/
 ├── include/
-│   ├── Graph.h
-│   ├── Algorithms.h
-│   └── doctest.h         // for unit testing
+│   ├── Graph.hpp
+│   ├── Algorithms.hpp
+│   └── doctest.hpp         // for unit testing
 ├── src/
 │   ├── Graph.cpp         // Implementation of the Graph class
 │   ├── Algorithms.cpp    // Implementation of all algorithms
