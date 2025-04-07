@@ -37,7 +37,7 @@ namespace graph {
         delete[] adjacencyCapacities;
     }
 
-    // (Optional) Copy constructor
+    // Copy constructor
     Graph::Graph(const Graph& other)
         : numVertices(other.numVertices)
     {
@@ -56,7 +56,7 @@ namespace graph {
         }
     }
 
-    // (Optional) operator=
+    // operator=
     Graph& Graph::operator=(const Graph& other) {
         if(this == &other) {
             return *this;

@@ -5,13 +5,13 @@
 
 namespace graph {
 
-    // ----- A simple array-based queue for BFS
+    //A simple array-based queue for BFS
     class ArrayQueue {
     private:
         int* data;
         int front;
         int rear;
-        // Removed the unused 'capacity'
+    
     public:
         // We keep the constructor parameter 'cap' because we use it in new int[cap]
         ArrayQueue(int cap) : front(0), rear(0) {
@@ -24,13 +24,9 @@ namespace graph {
             return (front == rear);
         }
         void enqueue(int val) {
-            // If you want overflow checks, you could do:
-            // if(rear >= cap) throw "Queue overflow!";
             data[rear++] = val;
         }
         int dequeue() {
-            // If you want underflow checks, you could do:
-            // if(isEmpty()) throw "Queue underflow!";
             return data[front++];
         }
     };
@@ -101,7 +97,7 @@ namespace graph {
         return dfsTree;
     }
 
-    // ----- A naive array-based priority queue for Dijkstra/Prim
+    //An array-based priority queue for Dijkstra/Prim
     struct PQItem {
         int vertex;
         int dist;
@@ -111,7 +107,6 @@ namespace graph {
     private:
         PQItem* data;
         int size;
-        // Removed the unused 'capacity'
     public:
         // Keep constructor param 'cap' to allocate 'data'
         ArrayMinPriorityQueue(int cap) : size(0) {
@@ -165,7 +160,7 @@ namespace graph {
         }
     };
 
-    // ----- Dijkstra with negative edge weight exception
+    //Dijkstra with negative edge weight exception
     Graph Algorithms::dijkstra(const Graph& g, int startVertex) {
         int n = g.getNumVertices();
         Graph tree(n);
@@ -198,7 +193,7 @@ namespace graph {
         while(!pq.isEmpty()) {
             PQItem item = pq.pop();
             int u = item.vertex;
-            if(u == -1) break;  // queue vide
+            if(u == -1) break;
             if(visited[u]) continue;
 
             visited[u] = true;
@@ -237,7 +232,7 @@ namespace graph {
         return tree;
     }
 
-    // ----- Union-Find for Kruskal
+    //Union-Find for Kruskal
     class UnionFind {
     private:
         int* parent;
@@ -278,7 +273,7 @@ namespace graph {
         }
     };
 
-    // ----- Prim
+    // Prim
     Graph Algorithms::prim(const Graph& g) {
         int n = g.getNumVertices();
         Graph mst(n);
@@ -335,13 +330,13 @@ namespace graph {
         return mst;
     }
 
-    // ----- Kruskal
+    // Kruskal
     Graph Algorithms::kruskal(const Graph& g) {
         int n = g.getNumVertices();
         Graph mst(n);
         UnionFind uf(n);
 
-        // Count total edges (each edge appears twice in an undirected graph)
+        // Count total edges (each edge appears twice in an undirected graph so we divide by 2)
         int totalEdges = 0;
         for(int i = 0; i < n; i++) {
             totalEdges += g.getAdjSize(i);
@@ -371,7 +366,7 @@ namespace graph {
             }
         }
 
-        // naive bubble sort by w
+        // bubble sort by w (high runtime but in the assignment requirements we were said that runtime efficiency doesn't matter)
         for(int i = 0; i < uniqueEdges - 1; i++) {
             for(int j = i + 1; j < uniqueEdges; j++) {
                 if(edgesArr[j].w < edgesArr[i].w) {

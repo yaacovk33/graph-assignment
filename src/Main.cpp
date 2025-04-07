@@ -7,8 +7,7 @@
 using namespace graph;
 
 int main() {
-    // FIRST EXAMPLE: NO NEGATIVE EDGES
-    // ----------------------------------------------------
+    // First example with only positive weighted edges (no negative edeges)
     Graph g(5);
     g.addEdge(0,1,2);
     g.addEdge(0,2,3);
@@ -16,7 +15,7 @@ int main() {
     g.addEdge(2,3,4);
     g.addEdge(3,4,6);
 
-    std::cout << "===== FIRST EXAMPLE (NO NEGATIVE EDGES) =====\n";
+    std::cout << "First example (No negative edges)\n";
     std::cout << "Original Graph:\n";
     g.printGraph();
     std::cout << "\n";
@@ -52,20 +51,19 @@ int main() {
     std::cout << "\n";
 
 
-    // SECOND EXAMPLE: NEGATIVE EDGES (check Dijkstra exception)
-    // ----------------------------------------------------
+    // Another example with this time negative edges so we can check the exception in dijkstra
     Graph g2(4);
     // Here we add a negative edge weight
     g2.addEdge(0,1,-2);
     g2.addEdge(1,2,4);
     g2.addEdge(2,3,1);
 
-    std::cout << "===== SECOND EXAMPLE (NEGATIVE EDGES) =====\n";
+    std::cout << "Second example (including negative edge(s) \n";
     std::cout << "Original Graph (with negative edge 0-1):\n";
     g2.printGraph();
     std::cout << "\n";
 
-    // Let's see BFS or DFS still works, because they don't mind negative edges
+    // Let's see that BFS or DFS still works, because they don't mind negative edges
     Graph bfs2 = Algorithms::bfs(g2, 0);
     std::cout << "BFS Tree (from 0, ignoring negatives):\n";
     bfs2.printGraph();
