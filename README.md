@@ -36,7 +36,7 @@ graph_assignment-sp2/
 │   └── tests.cpp         // Unit tests with doctest
 ├── Makefile
 └── README.md
-
+```
 
 ---
 
