@@ -1,13 +1,15 @@
-// email: yaacovkrawiec@gmail.com
+<!-- email: yaacovkrawiec@gmail.com -->
+
 # Graph Assignment
 
-**Author**: [yaacovk33]  
-**Email**: [yaacovkrawiec@gmail.com]
+**Author**: yaacovk33  
+**Email**: yaacovkrawiec@gmail.com
 
+---
 
 ## Overview
 
-This project implements an **undirected simple graph** (no multiple edges, no self-loops) using adjacency lists, and **does not use any standard library containers** (`std::vector`, `std::queue`, etc.).  
+This project implements an **undirected simple graph** (no multiple edges, no self-loops) using adjacency lists, and **does not use any standard library containers** (for example, `std::vector`, `std::queue`, etc.).
 
 Five classic graph algorithms are provided:
 
@@ -16,6 +18,25 @@ Five classic graph algorithms are provided:
 3. **Dijkstra** (Shortest paths – throws an exception if a negative edge is found)  
 4. **Prim** (Minimum Spanning Tree)  
 5. **Kruskal** (Minimum Spanning Tree, using union-find)
+
+---
+
+## Project Structure
+
+```plaintext
+graph_assignment-sp2/
+├── include/
+│   ├── Graph.h
+│   ├── Algorithms.h
+│   └── doctest.h         // for unit testing
+├── src/
+│   ├── Graph.cpp         // Implementation of the Graph class
+│   ├── Algorithms.cpp    // Implementation of all algorithms
+│   ├── Main.cpp          // Demo usage
+│   └── tests.cpp         // Unit tests with doctest
+├── Makefile
+└── README.md
+
 
 ---
 
@@ -64,7 +85,12 @@ Five classic graph algorithms are provided:
 
    Runs valgrind --leak-check=full ./Main.
 
-4. **Clean**:
+4. **Valgrind check on the tests**:
+   -> bash terminal
+   make test
+   valgrind --leak-check=full ./test_exec
+
+5. **Clean**:
    -> bash terminal
    make clean
 
