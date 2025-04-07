@@ -63,9 +63,9 @@ graph_assignment-sp2/
 ## How to Build and Run
 
 1. **Compile the main demo**:
-   -> bash terminal
-   make Main
-   ./Main
+   -> bash terminal<br>
+   make Main<br>
+   ./Main<br>
 
    The program will print:
 
@@ -74,25 +74,25 @@ graph_assignment-sp2/
    A second example with negative edges, which will trigger an exception when calling Dijkstra
 
 2. **Compile and Run the tests**:
-   -> bash terminal
-   make test
+   -> bash terminal<br>
+   make test<br>
    
    Unit tests use doctest and will indicate any failures.
 
 3. **Memory check through Valgrind**:
-   -> bash terminal
-   make valgrind
+   -> bash terminal<br>
+   make valgrind<br>
 
    Runs valgrind --leak-check=full ./Main.
 
 4. **Valgrind check on the tests**:
-   -> bash terminal
-   make test
+   -> bash terminal<br>
+   make test<br>
    valgrind --leak-check=full ./test_exec
 
 5. **Clean**:
-   -> bash terminal
-   make clean
+   -> bash terminal<br>
+   make clean<br>
 
    Will remove all the .o files and executabls 
 
