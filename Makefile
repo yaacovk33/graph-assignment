@@ -40,14 +40,14 @@ clean:
 
 # === COMPILATION RULES FOR EACH .cpp ===
 
-$(SRC_DIR)/Graph.o: $(SRC_DIR)/Graph.cpp $(INCLUDE_DIR)/Graph.h
+$(SRC_DIR)/Graph.o: $(SRC_DIR)/Graph.cpp $(INCLUDE_DIR)/Graph.hpp
 	$(CXX) $(CXXFLAGS) -c $(SRC_DIR)/Graph.cpp -o $(SRC_DIR)/Graph.o
 
-$(SRC_DIR)/Algorithms.o: $(SRC_DIR)/Algorithms.cpp $(INCLUDE_DIR)/Algorithms.h
+$(SRC_DIR)/Algorithms.o: $(SRC_DIR)/Algorithms.cpp $(INCLUDE_DIR)/Algorithms.hpp
 	$(CXX) $(CXXFLAGS) -c $(SRC_DIR)/Algorithms.cpp -o $(SRC_DIR)/Algorithms.o
 
-$(SRC_DIR)/Main.o: $(SRC_DIR)/Main.cpp $(INCLUDE_DIR)/Graph.h $(INCLUDE_DIR)/Algorithms.h
+$(SRC_DIR)/Main.o: $(SRC_DIR)/Main.cpp $(INCLUDE_DIR)/Graph.hpp $(INCLUDE_DIR)/Algorithms.hpp
 	$(CXX) $(CXXFLAGS) -c $(SRC_DIR)/Main.cpp -o $(SRC_DIR)/Main.o
 
-$(SRC_DIR)/tests.o: $(SRC_DIR)/tests.cpp $(INCLUDE_DIR)/Graph.h $(INCLUDE_DIR)/Algorithms.h
+$(SRC_DIR)/tests.o: $(SRC_DIR)/tests.cpp $(INCLUDE_DIR)/Graph.hpp $(INCLUDE_DIR)/Algorithms.hpp
 	$(CXX) $(CXXFLAGS) -c $(SRC_DIR)/tests.cpp -o $(SRC_DIR)/tests.o

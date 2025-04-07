@@ -1,7 +1,7 @@
 // email: yaacovkrawiec@gmail.com
 
-#include "../include/Graph.h"
-#include "../include/Algorithms.h"
+#include "../include/Graph.hpp"
+#include "../include/Algorithms.hpp"
 #include <iostream>
 
 using namespace graph;

@@ -1,6 +1,6 @@
 // email: yaacovkrawiec@gmail.com
 
-#include "../include/Graph.h"
+#include "../include/Graph.hpp"
 
 namespace graph {
 

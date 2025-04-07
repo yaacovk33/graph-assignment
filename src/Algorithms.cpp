@@ -1,6 +1,6 @@
 // email: yaacovkrawiec@gmail.com
 
-#include "../include/Algorithms.h"
+#include "../include/Algorithms.hpp"
 #include <limits> // For numeric_limits<int>::max()
 
 namespace graph {

@@ -1,9 +1,9 @@
 // email: yaacovkrawiec@gmail.com
 
 #define DOCTEST_CONFIG_IMPLEMENT
-#include "doctest.h"
-#include "../include/Graph.h"
-#include "../include/Algorithms.h"
+#include "doctest.hpp"
+#include "../include/Graph.hpp"
+#include "../include/Algorithms.hpp"
 #include <stdexcept>
 
 using namespace graph;
